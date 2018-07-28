@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Incidents</title>
+</head>
+<body>
+	<h1>Create Incident</h1>
+
+	<form method="post" th:action="@{/incident/processCreateIncident}" th:object="${incidentDto}">
+		<input type="text" name="incidentName" placeholder="Enter Incident Name" th:field="*{incidentName}"/><br>
+		<span th:errors="*{incidentName}"></span><br>
+		<input type="submit" value="create incident"/>
+	</form>
+	
+	<a th:href="@{/incident/}">Back To Home</a>
+</body>
+</html>

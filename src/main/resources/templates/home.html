@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Incidents</title>
+</head>
+<body>
+	<a th:href="@{/incident/getAll}">Show all incidents</a>
+	<a th:href="@{/incident/createIncident}">Create new incident</a>
+	<a th:href="@{/incident/searchByIncidentName}">Search incident name</a>
+	<form th:action="@{/logout}" method="POST" sec:authorize="isAuthenticated()">
+		<input type="submit" value="Logout"/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="post" th:action="@{/incident/processSearchIncidentName}">
+		<input type="text" name="incidentName" placeholder="Enter Incident Name"/>
+		<input type="submit" name="submit" value="Search"/>
+	</form>
+</body>
+</html>

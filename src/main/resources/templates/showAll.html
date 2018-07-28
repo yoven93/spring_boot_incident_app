@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Incidents</title>
+</head>
+<body>
+	<h1>Incidents</h1>
+
+	<h2 th:if="${isListEmpty == true}">No Incidents Found</h2>
+
+	
+	<table border="1" cellpadding="5" th:if="${isListEmpty == false}">
+		<tr>
+			<th>Incident Id</th>
+			<th>Incident Name</th>
+			<th>Incident Date</th>
+		</tr>
+
+		<tr th:each="incident : ${incidents}">
+			<td th:text="${incident.incidentId}">ID</td>
+			<td th:text="${incident.incidentName}">Name</td>
+			<td th:text="${incident.incidentDate}">Date</td>
+		</tr>
+
+	</table>
+	
+	<br><hr><br>
+	
+	<a th:href="@{/incident/}">Back To Home</a>
+</body>
+</html>
